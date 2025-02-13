@@ -12,3 +12,4 @@ Semoga materi ini dapat bermanfaat bagi para pembaca.
 NAMA: IRNA KHALDA LUQYANA
 NIM: 230411100013
 PRODI: TEKNIK INFORMATIKA
+EMAIL : irnakhalda@gmail.com
