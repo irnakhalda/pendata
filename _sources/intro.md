@@ -1,11 +1,15 @@
-# Welcome to your Jupyter Book
+# Selamat datang, PENAMBAHAN DATA E
+## PENDAHULUAN
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Ini adalah Jupyter Book Irna Khalda yang berisi tentang materi Penambangan Data Semester 4.
 
-Check out the content pages bundled with this sample book to see more.
+Penambangan data adalah teknik analisis data yang menggunakan komputer untuk menemukan pola dan hubungan tersembunyi dalam data. Penambangan data juga disebut penemuan data atau eksplorasi pengetahuan. Teknik ini banyak digunakan dalam berbagai bidang, seperti bisnis, kesehatan, dan penelitian, untuk membantu pengambilan keputusan yang lebih baik.
 
-```{tableofcontents}
-```
+Dengan memahami konsep dan penerapan penambangan data, pembaca diharapkan dapat mengembangkan keterampilan dalam menganalisis data serta mengoptimalkan pemanfaatan informasi yang tersedia.
+
+Semoga materi ini dapat bermanfaat bagi para pembaca.
+
+NAMA: IRNA KHALDA LUQYANA
+NIM: 230411100013
+PRODI: TEKNIK INFORMATIKA
+EMAIL : irnakhalda@gmail.com
