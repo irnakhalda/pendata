@@ -183,6 +183,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="tugas1.html">Tugas1 Data_mining</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Tugas 2 data_understanding</strong></a></li>
+
 </ul>
 
     </div>
@@ -378,6 +379,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 2 data_understanding</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-outlier-deteksi"><strong>Penjelasan Outlier Deteksi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-dengan-k-nearest-neighbors-knn-dalam-data-understanding"><strong>Deteksi Outlier dengan K-Nearest Neighbors (KNN) dalam Data Understanding</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pengantar-outlier-dalam-data-understanding">1. Pengantar Outlier dalam Data Understanding</a></li>
@@ -389,6 +391,13 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-data-dari-mysql-ke-dataframe-pandas">Mengambil Data dari MySQL ke DataFrame Pandas</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lof">LOF</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lof">APA ITU LOF?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-tahapan-lof">BAGAIMANA TAHAPAN LOF?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-parameter"><strong>1. Menentukan Parameter</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jarak-antar-titik"><strong>2. Menghitung Jarak Antar Titik</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-tetangga-terdekat-k-nearest-neighbors"><strong>3. Menentukan Tetangga Terdekat (k-Nearest Neighbors)</strong></a></li>
@@ -406,6 +415,9 @@ document.write(`
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -931,13 +943,19 @@ KNN cocok untuk dataset yang tidak terlalu besar karena kompleksitas komputasiny
 </div>
 </div>
 </div>
-<p>#LOF
-##APA ITU LOF?
-Algoritme Local Outlier Factor (LOF) adalah metode deteksi anomali tanpa pengawasan yang menilai seberapa jauh kerapatan lokal suatu titik data dibandingkan dengan tetangga terdekatnya. Metode ini mengidentifikasi sampel sebagai outlier jika kerapatannya secara signifikan lebih rendah dibandingkan dengan lingkungan sekitarnya. Contoh berikut menunjukkan penggunaan LOF dalam mendeteksi outlier, yang merupakan salah satu kasus penggunaan utama dari estimator ini di scikit-learn.</p>
-<p>##BAGAIMANA TAHAPAN LOF?
-Tahapan dalam algoritme <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi outlier adalah sebagai berikut:</p>
 </section>
 </section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="lof">
+<h1>LOF<a class="headerlink" href="#lof" title="Link to this heading">#</a></h1>
+<section id="apa-itu-lof">
+<h2>APA ITU LOF?<a class="headerlink" href="#apa-itu-lof" title="Link to this heading">#</a></h2>
+<p>Algoritme Local Outlier Factor (LOF) adalah metode deteksi anomali tanpa pengawasan yang menilai seberapa jauh kerapatan lokal suatu titik data dibandingkan dengan tetangga terdekatnya. Metode ini mengidentifikasi sampel sebagai outlier jika kerapatannya secara signifikan lebih rendah dibandingkan dengan lingkungan sekitarnya. Contoh berikut menunjukkan penggunaan LOF dalam mendeteksi outlier, yang merupakan salah satu kasus penggunaan utama dari estimator ini di scikit-learn.</p>
+</section>
+<section id="bagaimana-tahapan-lof">
+<h2>BAGAIMANA TAHAPAN LOF?<a class="headerlink" href="#bagaimana-tahapan-lof" title="Link to this heading">#</a></h2>
+<p>Tahapan dalam algoritme <strong>Local Outlier Factor (LOF)</strong> untuk mendeteksi outlier adalah sebagai berikut:</p>
 <section id="menentukan-parameter">
 <h3><strong>1. Menentukan Parameter</strong><a class="headerlink" href="#menentukan-parameter" title="Link to this heading">#</a></h3>
 <ul class="simple">
@@ -1355,6 +1373,7 @@ $<span class="math notranslate nohighlight">\(
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 2 data_understanding</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjelasan-outlier-deteksi"><strong>Penjelasan Outlier Deteksi</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-dengan-k-nearest-neighbors-knn-dalam-data-understanding"><strong>Deteksi Outlier dengan K-Nearest Neighbors (KNN) dalam Data Understanding</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pengantar-outlier-dalam-data-understanding">1. Pengantar Outlier dalam Data Understanding</a></li>
@@ -1366,6 +1385,13 @@ $<span class="math notranslate nohighlight">\(
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mengambil-data-dari-mysql-ke-dataframe-pandas">Mengambil Data dari MySQL ke DataFrame Pandas</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#lof">LOF</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-lof">APA ITU LOF?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bagaimana-tahapan-lof">BAGAIMANA TAHAPAN LOF?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-parameter"><strong>1. Menentukan Parameter</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-jarak-antar-titik"><strong>2. Menghitung Jarak Antar Titik</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-tetangga-terdekat-k-nearest-neighbors"><strong>3. Menentukan Tetangga Terdekat (k-Nearest Neighbors)</strong></a></li>
@@ -1383,6 +1409,9 @@ $<span class="math notranslate nohighlight">\(
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
