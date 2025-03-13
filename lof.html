@@ -448,7 +448,7 @@ document.write(`
 <h3><strong>4. Menghitung Reachability Distance (Jarak Jangkauan)</strong><a class="headerlink" href="#menghitung-reachability-distance-jarak-jangkauan" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><em>Reachability distance</em> antara titik ( A ) dan ( B ) didefinisikan sebagai:<br />
-$<span class="math notranslate nohighlight">\( reach\text{-}dist_k(A,B) = \max(distance(A,B), k\text{-}distance(B)) \)</span>$</p></li>
+<span class="math notranslate nohighlight">\( reach\text{-}dist_k(A,B) = \max(distance(A,B), k\text{-}distance(B)) \)</span></p></li>
 <li><p>Nilai ini digunakan untuk menilai seberapa jauh suatu titik dari tetangga terdekatnya.</p></li>
 </ul>
 </section>
@@ -456,7 +456,7 @@ $<span class="math notranslate nohighlight">\( reach\text{-}dist_k(A,B) = \max(d
 <h3><strong>5. Menghitung Local Reachability Density (LRD)</strong><a class="headerlink" href="#menghitung-local-reachability-density-lrd" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><em>Local Reachability Density (LRD)</em> suatu titik adalah kebalikan dari rata-rata <em>reachability distance</em> ke tetangganya:<br />
-$<span class="math notranslate nohighlight">\( LRD(A) = \frac{1}{\frac{1}{k} \sum_{B \in N_k(A)} reach\text{-}dist(A,B)} \)</span>$</p></li>
+<span class="math notranslate nohighlight">\( LRD(A) = \frac{1}{\frac{1}{k} \sum_{B \in N_k(A)} reach\text{-}dist(A,B)} \)</span></p></li>
 <li><p>Semakin tinggi nilai LRD, semakin padat lingkungan titik tersebut.</p></li>
 </ul>
 </section>
@@ -464,7 +464,7 @@ $<span class="math notranslate nohighlight">\( LRD(A) = \frac{1}{\frac{1}{k} \su
 <h3><strong>6. Menghitung Local Outlier Factor (LOF)</strong><a class="headerlink" href="#menghitung-local-outlier-factor-lof" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>LOF dihitung sebagai rata-rata rasio LRD tetangga terdekat terhadap LRD titik tersebut:<br />
-$<span class="math notranslate nohighlight">\( LOF_k(A) = \frac{\sum_{B \in N_k(A)} \frac{LRD_k(B)}{LRD_k(A)}}{|N_k(A)|} \)</span>$</p></li>
+<span class="math notranslate nohighlight">\( LOF_k(A) = \frac{\sum_{B \in N_k(A)} \frac{LRD_k(B)}{LRD_k(A)}}{|N_k(A)|} \)</span></p></li>
 <li><p>Jika nilai LOF jauh lebih besar dari 1, titik tersebut memiliki kepadatan yang jauh lebih rendah dibandingkan tetangganya dan dapat dianggap sebagai <strong>outlier</strong>.</p></li>
 </ul>
 </section>
@@ -479,30 +479,27 @@ $<span class="math notranslate nohighlight">\( LOF_k(A) = \frac{\sum_{B \in N_k(
 <section id="dataset-3-titik-data">
 <h3><strong>Dataset (3 Titik Data)</strong><a class="headerlink" href="#dataset-3-titik-data" title="Link to this heading">#</a></h3>
 <p>Misalkan kita memiliki tiga titik data:<br />
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 A(1,1), \quad B(2,2), \quad C(8,8)
-\)</span>$<br />
+\)</span><br />
 Kita akan menghitung <strong>LOF untuk titik C</strong>, dengan jumlah tetangga <strong>k = 2</strong> dan menggunakan <strong>Euclidean distance</strong> sebagai metrik jarak.</p>
 </section>
 <hr class="docutils" />
 <section id="id1">
 <h3><strong>1. Menghitung Jarak Antar Titik</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Gunakan rumus <strong>Euclidean distance</strong>:<br />
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 d(A,B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 d(A,B) = \sqrt{(2 - 1)^2 + (2 - 1)^2} = \sqrt{1+1} = \sqrt{2} \approx 1.41
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 d(A,C) = \sqrt{(8 - 1)^2 + (8 - 1)^2} = \sqrt{49+49} = \sqrt{98} \approx 9.90
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 d(B,C) = \sqrt{(8 - 2)^2 + (8 - 2)^2} = \sqrt{36+36} = \sqrt{72} \approx 8.49
-\]</div>
+\)</span></p>
 </section>
 <hr class="docutils" />
 <section id="menentukan-tetangga-terdekat">
@@ -517,34 +514,30 @@ d(B,C) = \sqrt{(8 - 2)^2 + (8 - 2)^2} = \sqrt{36+36} = \sqrt{72} \approx 8.49
 <section id="menghitung-reachability-distance">
 <h3><strong>3. Menghitung <em>Reachability Distance</em></strong><a class="headerlink" href="#menghitung-reachability-distance" title="Link to this heading">#</a></h3>
 <p>Gunakan rumus:<br />
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \text{reach-dist}_k(A,B) = \max(d(A,B), k\text{-distance}(B))
-\)</span>$<br />
+\)</span><br />
 Di mana <strong>k-distance(B)</strong> adalah jarak ke tetangga ke-2, yaitu <strong>1.41</strong>.</p>
-<div class="math notranslate nohighlight">
-\[
+<p><span class="math notranslate nohighlight">\(
 \text{reach-dist}_k(C,B) = \max(8.49, 1.41) = 8.49
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 \text{reach-dist}_k(C,A) = \max(9.90, 1.41) = 9.90
-\]</div>
+\)</span></p>
 </section>
 <hr class="docutils" />
 <section id="id2">
 <h3><strong>4. Menghitung Local Reachability Density (LRD)</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
 <p>Gunakan rumus:<br />
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \text{LRD}(C) = \frac{1}{\frac{1}{k} \sum \text{reach-dist}_k(C,B)}
-\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 \text{LRD}(C) = \frac{1}{\frac{1}{2} (8.49 + 9.90)}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 = \frac{1}{\frac{18.39}{2}} = \frac{1}{9.195} \approx 0.109
-\]</div>
+\)</span></p>
 <p>Misalkan diperoleh hasil <strong>LRD</strong> untuk titik lain:</p>
 <ul class="simple">
 <li><p><strong>LRD(A) = 0.75</strong></p></li>
@@ -555,17 +548,15 @@ $<span class="math notranslate nohighlight">\(
 <section id="menghitung-lof-untuk-c">
 <h3><strong>5. Menghitung LOF untuk C</strong><a class="headerlink" href="#menghitung-lof-untuk-c" title="Link to this heading">#</a></h3>
 <p>Gunakan rumus:<br />
-$<span class="math notranslate nohighlight">\(
+<span class="math notranslate nohighlight">\(
 \text{LOF}(C) = \frac{\sum_{B \in N_k(C)} \frac{\text{LRD}(B)}{\text{LRD}(C)}}{|N_k(C)|}
-\)</span>$</p>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 \text{LOF}(C) = \frac{\left( \frac{0.75}{0.109} + \frac{0.68}{0.109} \right)}{2}
-\]</div>
-<div class="math notranslate nohighlight">
-\[
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
 = \frac{(6.88 + 6.24)}{2} = \frac{13.12}{2} = 6.56
-\]</div>
+\)</span></p>
 </section>
 <hr class="docutils" />
 <section id="interpretasi-hasil">
@@ -601,6 +592,9 @@ $<span class="math notranslate nohighlight">\(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
