@@ -19,25 +19,60 @@ Traceback (most recent call last):
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-# Load data
+# ----------------------------
+# 0. LOAD DATA
+# ----------------------------
 df = pd.read_csv('ObesityDataSet_raw_and_data_sinthetic.csv')
 
-# Cek missing value
-print("Missing Values per Kolom:\n")
+# ----------------------------
+# 1. CEK MISSING VALUE
+# ----------------------------
+print("Missing Values :")
 print(df.isnull().sum())
+print()
+
+# ----------------------------
+# 2. CEK OUTLIER DENGAN IQR
+# ----------------------------
+print("Outlier Check (IQR Method):")
+numeric_cols = df.select_dtypes(include='number').columns
+
+for col in numeric_cols:
+    Q1 = df[col].quantile(0.25)
+    Q3 = df[col].quantile(0.75)
+    IQR = Q3 - Q1
+    outliers = df[(df[col] < Q1 - 1.5*IQR) | (df[col] > Q3 + 1.5*IQR)]
+    print(f"{col}: {len(outliers)} outlier(s)")
+
+print()
+
+# ----------------------------
+# 3. DISTRIBUSI KELAS TARGET
+# ----------------------------
+print("=== Distribusi Kelas Target ===")
+target_col = 'NObeyesdad'
+print(df[target_col].value_counts())
+print()
+
 
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[3], line 4[0m
-[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m      3[0m [38;5;66;03m# Load data[39;00m
-[0;32m----> 4[0m df [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_csv[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mObesityDataSet_raw_and_data_sinthetic.csv[39;49m[38;5;124;43m'[39;49m[43m)[49m
-[1;32m      6[0m [38;5;66;03m# Cek missing value[39;00m
-[1;32m      7[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mMissing Values per Kolom:[39m[38;5;130;01m\n[39;00m[38;5;124m"[39m)
+Cell [0;32mIn[3], line 8[0m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+[1;32m      5[0m [38;5;66;03m# ----------------------------[39;00m
+[1;32m      6[0m [38;5;66;03m# 0. LOAD DATA[39;00m
+[1;32m      7[0m [38;5;66;03m# ----------------------------[39;00m
+[0;32m----> 8[0m df [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_csv[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mObesityDataSet_raw_and_data_sinthetic.csv[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m     10[0m [38;5;66;03m# ----------------------------[39;00m
+[1;32m     11[0m [38;5;66;03m# 1. CEK MISSING VALUE[39;00m
+[1;32m     12[0m [38;5;66;03m# ----------------------------[39;00m
+[1;32m     13[0m [38;5;28mprint[39m([38;5;124m"[39m[38;5;124mMissing Values :[39m[38;5;124m"[39m)
 
 File [0;32m~/.local/lib/python3.12/site-packages/pandas/io/parsers/readers.py:1026[0m, in [0;36mread_csv[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)[0m
 [1;32m   1013[0m kwds_defaults [38;5;241m=[39m _refine_defaults_read(
